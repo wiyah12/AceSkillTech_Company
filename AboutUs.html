@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        <link rel="stylesheet" href="CSS/AboutUs.css">
+        
+        <title>ACE SKILL TECH </title>
+</head>
+<body>
+    <div class="tab">
+        <button class="tablinks" onclick="openSubject(event, 'MISSION')">MISSION</button>
+        <button class="tablinks" onclick="openSubject(event, 'VISION')">VISION</button>
+        <button class="tablinks" onclick="openSubject(event, 'ORGANIZATION')">ORGANIZATION CHART</button>
+      </div>
+      
+      <div id="MISSION" class="tabcontent">
+        <div class="card">
+            <h2>MISSION</h2>
+            <h5>Providing a skills and academic platform according to the needs of the industry today.</h5>
+        </div>
+      </div>
+        
+      
+      <div id="VISION" class="tabcontent">
+        <div class="card">
+            <h2>VISION</h2>
+            <h5>To be a superior education, authoritative professional force to realize the national vision.</h5>
+        </div>
+      </div>
+      
+      <div id="ORGANIZATION" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      
+      <script>
+     function openSubject(evt, subjectName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    tabcontent[i].style.marginLeft = "0"; // Reset margin for all tabs
+   }
+
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  var selectedTab = document.getElementById(subjectName);
+  selectedTab.style.display = "block";
+  selectedTab.style.marginLeft= "100px"; // Set the margin for the selected tab
+
+
+  evt.currentTarget.className += " active";
+}
+      </script>
+   
+
+</body>
+</html>
