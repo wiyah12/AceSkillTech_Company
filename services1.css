@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body
+{
+  min-height: 100vh;
+}
+
+/*Ace Skill Tech Logo*/
+.logo
+{
+  width: 120px;
+	cursor: pointer;
+}
+
+/*Intro Section / Section 1*/
+.section-main
+{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url('Picture/Test7.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 20px 100px;
+}
+
+.section-main .hero-text 
+{
+  width: 80%;
+}
+
+.section-main h1
+{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 60px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 80px;
+}
+
+.section-main .hero-text p
+{
+  width: 65%;
+}
+
+.section-main p
+{
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 18px;
+  margin: 30px 0;
+}
+
+/*NavBar Section*/
+header
+{
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  transition: 0.6s;
+}
+
+header.sticky
+{
+  background: #000000;
+  padding: 15px 100px;
+}
+
+header .brand
+{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+header .menu
+{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .menu a
+{
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 30px;
+  padding: 0 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: color, background;
+}
+
+header .menu a:hover
+{
+  color: #000;
+  background: #fff;
+}
+
+header .btn
+{
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  display: none;
+}
+
+
+/*Sticky NavBar Responsive*/
+
+@media (max-width: 1060px)
+{
+  header .btn{
+    display: block;
+  }
+
+  header .menu
+  {
+    position: fixed;
+    background: #1483D5;
+    flex-direction: column;
+    min-width: 400px;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    padding: 80px 50px;
+    transition: 0.5s;
+    transition-property: right;
+  }
+
+  header .menu.active
+  {
+    right: 0;
+  }
+
+  header .menu .close-btn
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 25px;
+  }
+
+  header .menu a
+  {
+    display: block;
+    font-size: 20px;
+    margin: 20px;
+    padding: 0 15px;
+  }
+}
+
+/*Section 1 Responsive*/
+@media (max-width: 630px)
+{
+  .section-main h1{
+    font-size: 50px;
+    line-height: 60px;
+  }
+}
+
+
+/*Count Up Animation*/
+.counter-section 
+{
+  background-image: radial-gradient(circle, #051937, #052443, #052f4f, #063b5b, #074766);
+  position: relative;
+  padding: 4% 10%;
+  width: 100%;
+  min-height: vh;
+  padding: 20px 100px;
+}
+
+.count-text h1
+{
+  text-align: center;
+  position: relative;
+  font-size: 40px;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  color: hsl(38, 92%, 58%);
+}
+
+.count-text h1::after
+{
+  content: '';
+  position: absolute;
+  width: 170px;
+  height: 3px;
+  background: #fff;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.count-text h3
+{
+    color: #fff;
+}
